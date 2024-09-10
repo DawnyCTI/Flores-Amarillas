@@ -1,0 +1,33 @@
+
+.text-message {
+    position: fixed;
+    top: 5%; /* Moves it slightly down from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 2rem); /* Responsive font size */
+    color: #fffb0d;
+    z-index: 100;
+    animation: fadeIn 3s ease-in-out infinite alternate; /* Animation effect */
+    opacity: 0.8; /* Make it blend softly */
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0.6;
+        transform: translate(-50%, -20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Additional media query for smaller screens */
+@media (max-width: 600px) {
+    .text-message {
+        font-size: 1.2rem; /* Slightly smaller on small screens */
+        top: 10%; /* Moves down a little more for small screens */
+    }
+}
